@@ -42,7 +42,7 @@ def handle_binary_input():                                             # Funktio
     # while-lopp der erst verlassen wird wenn der user einen zugelassenen Input eingibt
     while True:
         # Nimmt Zahleninput des User entgegen
-        user_input = input("Gib eine binär Zahl ein.")
+        user_input = input("Gib eine binär Zahl ein. ")
         # If wird erst ausgeführt wenn useri_nput Richtig ist                                                       
         if is_binary(user_input):
             decimal_num = int(user_input, 2)
@@ -59,7 +59,7 @@ def handle_decimal_input():                                           # Funktion
     # while-lopp der erst verlassen wird wenn der user einen zugelassenen Input eingibt
     while True:     
         # Nimmt Zahleninput des User entgegen
-        user_input = input("Gib eine dezimal Zahl ein.")
+        user_input = input("Gib eine dezimal Zahl ein. ")
         # If wird erst ausgeführt wenn user_input Richtig ist
         if is_decimal(user_input):
             binary_num = bin(int(user_input))
@@ -76,7 +76,7 @@ def handle_hexadecimal_input():                                      # Funktion 
     # while-lopp der erst verlassen wird wenn der user einen zugelassenen Input eingibt
     while True:
         # Nimmt Zahleninput des User entgegen
-        user_input = input("Gib eine hexadezimal Zahl ein.")
+        user_input = input("Gib eine hexadezimal Zahl ein. ")
         # If wird erst ausgeführt wenn user_input Richtig ist
         if is_hexadecimal(user_input):
             decimal_num = int(user_input, 16)
