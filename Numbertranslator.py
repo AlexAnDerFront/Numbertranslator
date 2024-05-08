@@ -16,21 +16,21 @@ def get_input():                        # Funktion die Abfragt welche Art von Za
         else:
             print("Ungültiger input bitte 'b', 'd', oder 'h' eingeben!")
 
-def is_binary(input_str):                                                                                   # Funktion welche überürüft ob der Input binär ist
+def is_binary(input_str):               # Funktion welche überürüft ob der Input binär ist
     try:
         int(input_str, 2)  
         return True
     except ValueError:
         return False
         
-def is_decimal(input_str):                                                                                  # Funktion welche überürüft ob der Input dezimal ist
+def is_decimal(input_str):              # Funktion welche überürüft ob der Input dezimal ist
     try:
         int(input_str)
         return True
     except ValueError:
         return False
     
-def is_hexadecimal(input_str):                                                                               # Funktion welche überürüft ob der Input hexadezimal ist
+def is_hexadecimal(input_str):          # Funktion welche überürüft ob der Input hexadezimal ist
     try:
         int(input_str, 16)  
         return True  
@@ -38,9 +38,11 @@ def is_hexadecimal(input_str):                                                  
         return False
 
 
-def handle_binary_input():                                                                                   # Funktion welche 
+def handle_binary_input():                                             # Funktion welche binär Zahlen konvertiert
     while True:
+        # Nimmt Zahleninput des User entgegen
         user_input = input("Gib eine binär Zahl ein.")
+        # If wird erst ausgeführt wenn useri_nput Richtig ist                                                       
         if is_binary(user_input):
             decimal_num = int(user_input, 2)
             hexadecimal_num = hex(decimal_num)[2:].upper() 
@@ -52,9 +54,11 @@ def handle_binary_input():                                                      
         else:
             print("Falscher Input bitte eine binär Zahl") 
 
-def handle_decimal_input():
+def handle_decimal_input():                                           # Funktion welche dezimal Zahlen konvertiert
     while True:
+        # Nimmt Zahleninput des User entgegen
         user_input = int(input("Gib eine dezimal Zahl ein."))
+        # If wird erst ausgeführt wenn user_input Richtig ist
         if is_decimal(user_input):
             binary_num = bin(user_input)
             hexadecimal_num = hex(user_input)[2:].upper() 
@@ -66,9 +70,11 @@ def handle_decimal_input():
         else:
             print("Falscher Input bitte eine dezimal Zahl") 
 
-def handle_hexadecimal_input():
+def handle_hexadecimal_input():                                      # Funktion welche hexadezimal Zahlen konvertiert
     while True:
+        # Nimmt Zahleninput des User entgegen
         user_input = input("Gib eine hexadezimal Zahl ein.")
+        # If wird erst ausgeführt wenn user_input Richtig ist
         if is_hexadecimal(user_input):
             decimal_num = int(user_input, 16)
             binary_num = bin(decimal_num)[2:]
@@ -80,4 +86,4 @@ def handle_hexadecimal_input():
         else:
             print("Falscher Input bitte eine hexadezimal Zahl") 
 
-main()
+main()                                                                                                          # Aufruf der main()-Funktion zu start des Programms
