@@ -59,11 +59,11 @@ def handle_decimal_input():                                           # Funktion
     # while-lopp der erst verlassen wird wenn der user einen zugelassenen Input eingibt
     while True:     
         # Nimmt Zahleninput des User entgegen
-        user_input = int(input("Gib eine dezimal Zahl ein."))
+        user_input = input("Gib eine dezimal Zahl ein.")
         # If wird erst ausgeführt wenn user_input Richtig ist
         if is_decimal(user_input):
-            binary_num = bin(user_input)
-            hexadecimal_num = hex(user_input)[2:].upper() 
+            binary_num = bin(int(user_input))
+            hexadecimal_num = hex(int(user_input))[2:].upper() 
          #Output der Resultate
             print(f"Dezimal: {user_input}")
             print(f"Hexadezimal: {hexadecimal_num}")
