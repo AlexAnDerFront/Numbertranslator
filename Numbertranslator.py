@@ -1,36 +1,36 @@
-def main():
+def main():                             # Main Funktion
     input_format = get_input()
 
-    if input_format == 'b':
-        handle_binary_input()
+    if input_format == 'b':            # If Abgrage die je nach wahl des nutzers in die entsprechend nächste funktion überspringt
+        handle_binary_input()          # Funktion für binär
     elif input_format == 'd':
-        handle_decimal_input()
+        handle_decimal_input()         # Funktion für dezimal
     elif input_format == 'h':
-        handle_hexadecimal_input()
+        handle_hexadecimal_input()     # Funktion für hexadezimal
 
-def get_input():
+def get_input():                        # Funktion die Abfragt welche Art von Zahl der Nutzer eingeben will
     while True:
-        user_input = input("Bitte 'b' für Binär 'd' für dezimal oder 'h' hexadezimal eingeben: ").lower()
-        if user_input in ['b', 'd', 'h']:
+        user_input = input("Bitte 'b' für Binär 'd' für dezimal oder 'h' hexadezimal eingeben: ").lower()   # fragt Nutzer input ab und covertiert ihn zu lower case
+        if user_input in ['b', 'd', 'h']:                                                                   # if abfrage welche  überprüft ob der input gültig ist
             return user_input
         else:
             print("Ungültiger input bitte 'b', 'd', oder 'h' eingeben!")
 
-def is_binary(input_str):
+def is_binary(input_str):                                                                                   # Funktion welche überürüft ob der Input binär ist
     try:
         int(input_str, 2)  
         return True
     except ValueError:
         return False
         
-def is_decimal(input_str):
+def is_decimal(input_str):                                                                                  # Funktion welche überürüft ob der Input dezimal ist
     try:
         int(input_str)
         return True
     except ValueError:
         return False
     
-def is_hexadecimal(input_str):
+def is_hexadecimal(input_str):                                                                               # Funktion welche überürüft ob der Input hexadezimal ist
     try:
         int(input_str, 16)  
         return True  
@@ -38,7 +38,7 @@ def is_hexadecimal(input_str):
         return False
 
 
-def handle_binary_input():
+def handle_binary_input():                                                                                   # Funktion welche 
     while True:
         user_input = input("Gib eine binär Zahl ein.")
         if is_binary(user_input):
