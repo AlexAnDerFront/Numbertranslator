@@ -39,6 +39,7 @@ def is_hexadecimal(input_str):          # Funktion welche überürüft ob der In
 
 
 def handle_binary_input():                                             # Funktion welche binär Zahlen konvertiert
+    # while-lopp der erst verlassen wird wenn der user einen zugelassenen Input eingibt
     while True:
         # Nimmt Zahleninput des User entgegen
         user_input = input("Gib eine binär Zahl ein.")
@@ -55,7 +56,8 @@ def handle_binary_input():                                             # Funktio
             print("Falscher Input bitte eine binär Zahl") 
 
 def handle_decimal_input():                                           # Funktion welche dezimal Zahlen konvertiert
-    while True:
+    # while-lopp der erst verlassen wird wenn der user einen zugelassenen Input eingibt
+    while True:     
         # Nimmt Zahleninput des User entgegen
         user_input = int(input("Gib eine dezimal Zahl ein."))
         # If wird erst ausgeführt wenn user_input Richtig ist
@@ -71,6 +73,7 @@ def handle_decimal_input():                                           # Funktion
             print("Falscher Input bitte eine dezimal Zahl") 
 
 def handle_hexadecimal_input():                                      # Funktion welche hexadezimal Zahlen konvertiert
+    # while-lopp der erst verlassen wird wenn der user einen zugelassenen Input eingibt
     while True:
         # Nimmt Zahleninput des User entgegen
         user_input = input("Gib eine hexadezimal Zahl ein.")
