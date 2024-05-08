@@ -47,11 +47,11 @@ def handle_binary_input():                                             # Funktio
         if is_binary(user_input):
             decimal_num = int(user_input, 2)
             hexadecimal_num = hex(decimal_num)[2:].upper() 
-         #Outpbut der Resultate
+         # Outpbut der Resultate
             print(f"Dezimal: {decimal_num}")
             print(f"Hexadezimal: {hexadecimal_num}")
             print(f"Binär: {user_input}")
-            break #Loop wird verlassen
+            break # Loop wird verlassen
         else:
             print("Falscher Input bitte eine binär Zahl") 
 
@@ -64,11 +64,11 @@ def handle_decimal_input():                                           # Funktion
         if is_decimal(user_input):
             binary_num = bin(int(user_input))
             hexadecimal_num = hex(int(user_input))[2:].upper() 
-         #Output der Resultate
+         # Output der Resultate
             print(f"Dezimal: {user_input}")
             print(f"Hexadezimal: {hexadecimal_num}")
             print(f"Binär: {binary_num}")
-            break #Loop wird verlassen
+            break # Loop wird verlassen
         else:
             print("Falscher Input bitte eine dezimal Zahl") 
 
@@ -81,11 +81,11 @@ def handle_hexadecimal_input():                                      # Funktion 
         if is_hexadecimal(user_input):
             decimal_num = int(user_input, 16)
             binary_num = bin(decimal_num)[2:]
-         #Output der Resultate
+         # Output der Resultate
             print(f"Dezimal: {decimal_num}")
             print(f"Hexadezimal: {user_input}")
             print(f"Binär: {binary_num}")
-            break #Loop wird verlassen
+            break # Loop wird verlassen
         else:
             print("Falscher Input bitte eine hexadezimal Zahl") 
 
